@@ -1,0 +1,29 @@
+<h2>Lista de Productos</h2>
+
+<button *ngFor="let categoria of categorias">
+  {{ categoria }}
+</button>
+
+<div class="contenedor">
+
+  <div class="card" *ngFor="let producto of productos">
+
+    <img [src]="producto.image">
+
+    <h3>
+      {{ producto.title }}
+    </h3>
+    <p>{{producto.description}}</p>
+    <span>{{producto.category}}</span>
+
+    <p>
+      Precio: ${{ producto.price }}
+    </p>                                          
+
+    <button>
+      Ver producto
+    </button>
+
+  </div>
+
+</div>

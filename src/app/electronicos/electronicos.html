@@ -1,0 +1,23 @@
+<h1 class="flex justify-center items-center text-3xl">Categoría de Electronicos</h1>
+
+<section class="grid grid-cols-2 grid-rows-3 w-300 m-10 gap-10 bg-[#E0FFFF] ">
+    <div *ngFor=" let productos  of productos_electronicos" class=" flex justify-center items-center flex-col  rounded-2xl border">
+        <img [src]="productos.image" class="w-36 h-28 rounded-2xl ">
+
+        <h2 class="text-2xl text-blue-600 text-center ">{{productos.title}}</h2>
+
+        <p class="text-red-500 text-xl">
+            Precio: ${{ productos.price}}
+        </p>
+
+        <p class="text-justify m-5">{{productos.description}}</p>
+
+        <span class="text-xl">{{productos.category}}</span>
+
+        
+
+        <button class="hover:bg-blue-400 hover:text-white bg-blue-500 text-black rounded-2xl w-36 text-xl">
+            Ver Producto
+        </button>
+    </div>
+</section>

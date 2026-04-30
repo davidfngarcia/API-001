@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './productos.html',
-  styleUrl: './productos.css'
+  styleUrl : './productos.css'
 })
 export class ProductosComponent implements OnInit {
 
@@ -75,4 +75,3 @@ export class ProductosComponent implements OnInit {
   }
 
 }
-

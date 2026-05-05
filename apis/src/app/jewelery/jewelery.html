@@ -1,0 +1,23 @@
+<h1 class="flex justify-center items-center text-3xl">Categoría de Joyeria</h1>
+<section class="lg:grid lg:grid-cols-3 lg:grid-rows-3 gap-5 p-4  bg-linear-to-tr from-[#124B54] via-[#749898] to-[#A9E2D1] place-items-center sm:flex sm:flex-col md:grid md:grid-cols-2 md:grid-rows-2 h-fit w-full">
+    <div *ngFor=" let productos  of productos_jewelery" class=" flex justify-center items-center flex-col h-120 w-90  rounded-3xl bg-white">
+        <img [src]="productos.image" class="w-44 h-40 rounded-2xl m-2 ">
+
+        <div class="flex flex-col items-start">
+            <h2 class="text-2xl   truncate w-84 ">{{productos.title}}</h2>
+            <p class="text-gray-600 text-xl  ">Precio: ${{ productos.price}}</p>
+        </div>
+
+
+        <p class="text-justify mx-4 my-2  divide-x  line-clamp-3 text-gray-600">{{productos.description}}</p>
+
+
+        <div class="grid grid-cols-2 mx-2 my-4 gap-3">
+            <button class="bg-gray-200 rounded-2xl text-2xl hover:bg-gray-400 w-42 h-16 ">{{productos.rating.rate}}</button>
+            <button class="bg-gray-200 rounded-2xl text-2xl hover:bg-gray-400 w-42 h-16 "> {{productos.rating.count}}</button>
+            <button class="hover:bg-red-500 hover:text-black bg-black text-white rounded-2xl w-86 h-12 text-xl">{{productos.category}}</button>
+        </div>
+
+
+    </div>
+</section>
